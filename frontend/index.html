@@ -8,8 +8,8 @@
     <link rel="Stylesheet" href="./style/index.css" />
     <link rel="icon" type="image/png" href="./image/icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -22,9 +22,9 @@
             <div>
                 <a>Home</a>
                 <a>About Us</a>
-                <a>Batches</a>
+                <a href="./batches/batches.html">Batches</a>
                 <a>Contact Us</a>
-                <a href="./admin-panel/adminpanel.html" target="_blank">Admin Panel</a>
+                <a href="./admin-panel/adminpanel.html" target="_blank">Admin</a>
             </div>
         </div>
         <div class="main-navigation-login">
@@ -37,14 +37,59 @@
     <section class="main-hero">
         <div class="main-hero-left">
             <h1>Empowering students through <span class="main-hero-left-span">Expert Mentorship.</span></h1>
-            <p>Join our expert faculty to build a rock-solid foundation for your academic journey. We focus on real understanding, structured mock tests, and the personalized guidance you need to excel in your exams.</p>
-            <input type="button" value="Explore Course" class="main-hero-left-button"/>
-            <input type="button" value="Book Slot" class="main-hero-left-button"/>
+            <p>Join our expert faculty to build a rock-solid foundation for your academic journey. We focus on real
+                understanding, structured mock tests, and the personalized guidance you need to excel in your exams.</p>
+            <input type="button" value="Explore Course" class="main-hero-left-button" />
+            <input type="button" value="Book Slot" class="main-hero-left-button" />
         </div>
         <div class="main-hero-right">
             <img src="./image/home/hero.png" alt="hero-image" />
         </div>
     </section>
+
+
+    <!-- About Our Academy -->
+    <section class="main-ouracademy">
+        <h1>About <span class="main-ouracademy-header">Our Academy</span></h1>
+        <p class="main-ouracademy-paragraph">Discover our state-of-the-art facilities and meet the leadership guiding our students to excellence.</p>
+        <div class="main-ouracademy-div">
+            <div class="main-ouracademy-leftdiv">
+                <div class="main-ouracademy-leftdiv-topsection">
+                    <img src="" alt="Top Image"/>
+                </div>
+                <div class="main-ouracademy-leftdiv-belowsection">
+                    <div class="main-ouracademy-leftdiv-belowsection-left">
+                        <img src="" alt="Below Left Image"/>
+                    </div>
+                    <div class="main-ouracademy-leftdiv-belowsection-right">
+                        <img src="" alt="Below Right Image"/>
+                    </div>
+                </div>
+            </div>
+            <div class="main-ouracademy-rightdiv">
+                <div class="main-ouracademy-rightdiv-founder">
+                    <div class="main-ouracademy-rightdiv-founder-img">
+                        <img src="" alt="Founder Image" />
+                    </div>
+                    <div class="main-ouracademy-rightdiv-founder-details">
+                        <h2>AKARSH KUMAR</h2>
+                        <p>Founder</p>
+                    </div>
+                </div>
+                <div class="main-ouracademy-rightdiv-quotes">
+                    <p>Hello World is a great programming concept</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
 
     <!-- Top Performer Section -->
     <section class="main-topperformer">
@@ -57,6 +102,8 @@
                 <div class="main-topperformer-student-div-marks">
                     <p>95.6%</p>
                 </div>
+                <h3>AKARSH KUMAR</h3>
+
             </div>
             <div class="main-topperformer-student-div">
                 <div class="main-topperformer-student-div-imagediv">
@@ -65,6 +112,7 @@
                 <div class="main-topperformer-student-div-marks">
                     <p>95.6%</p>
                 </div>
+
             </div>
             <div class="main-topperformer-student-div">
                 <div class="main-topperformer-student-div-imagediv">
@@ -76,9 +124,9 @@
                     <img src="./image/home/topper.png" alt="profile-image" />
                 </div>
             </div>
-            
-            
-            
+
+
+
 
             <!-- Duplicate set -->
             <!-- <div class="main-topperformer-student-div">
@@ -94,10 +142,20 @@
                 <p>Hello</p>
             </div>
              -->
-            
-            
+
+
         </div>
     </section>
+
+
+
+
+
+
+
+
+
+
 
     <!-- Contact & Support Section -->
     <section class="main-contactsupport">
@@ -106,28 +164,124 @@
         </div>
         <div class="main-contactsupport-right">
             <h1>Customer & Support</h1>
-            <form class="main-contactsupport-right-form">
+            <form class="main-contactsupport-right-form" method="post">
                 <div>
-                <label>Name</label><br>
-                <input type="text" placeholder="Enter Your Name"/>
+                    <label>Name</label><br>
+                    <input type="text" placeholder="Enter Your Name" />
                 </div>
 
                 <div>
-                <label>Email</label><br>
-                <input type="email" placeholder="aakarshkumar@gmail.com" /> 
+                    <label>Email</label><br>
+                    <input type="email" placeholder="aakarshkumar@gmail.com" />
                 </div>
                 <div>
-                <label>Mobile No.</label><br>
-                <input type="number" placeholder="Enter Your Mobile No." /> 
+                    <label>Mobile No.</label><br>
+                    <input type="number" placeholder="Enter Your Mobile No." />
                 </div>
                 <div>
-                <label>Feedback</label><br>
-                <textarea type="text" placeholder="Give Your Query or Feedback"></textarea> 
+                    <label>Feedback</label><br>
+                    <textarea type="text" placeholder="Give Your Query or Feedback"></textarea>
                 </div>
-                <input type="submit" value="submit" class="main-contactsupport-right-form-button"/>
+                <input type="submit" value="submit" class="main-contactsupport-right-form-button" />
             </form>
         </div>
     </section>
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Footer -->
+    <footer class="site_footer" id="contact">
+        <div class="footer_inner">
+            <div class="footer_grid">
+                <!-- Brand Column -->
+                <div class="footer_col footer_brand_col">
+                    <div class="footer_logo">Coaching<span>.</span></div>
+                    <p class="footer_tagline">Empowering students to reach their highest potential through dedicated
+                        mentorship and world-class learning resources.</p>
+                    <div class="footer_social_links">
+                        <a href="#" class="footer_social_icon" aria-label="Facebook">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="footer_social_icon" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                                <circle cx="12" cy="12" r="4" />
+                                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+                            </svg>
+                        </a>
+                        <a href="#" class="footer_social_icon" aria-label="YouTube">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                                <path
+                                    d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.96-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z" />
+                                <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="white" />
+                            </svg>
+                        </a>
+                        <a href="#" class="footer_social_icon" aria-label="Twitter">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                                <path
+                                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <!-- Quick Links -->
+                <div class="footer_col">
+                    <h4 class="footer_col_title">Quick Links</h4>
+                    <ul class="footer_links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Our Faculty</a></li>
+                        <li><a href="#stats">Results</a></li>
+                        <li><a href="#fees">Fee Structure</a></li>
+                        <li><a href="#location">Contact</a></li>
+                    </ul>
+                </div>
+                <!-- Programs -->
+                <div class="footer_col">
+                    <h4 class="footer_col_title">Our Programs</h4>
+                    <ul class="footer_links">
+                        <li><a href="#">Class 8 Program</a></li>
+                        <li><a href="#">Class 9 Program</a></li>
+                        <li><a href="#">Class 10 Board</a></li>
+                        <li><a href="#">Class 11 Program</a></li>
+                        <li><a href="#">Class 12 Board</a></li>
+                        <li><a href="#">Competitive Exams</a></li>
+                    </ul>
+                </div>
+                <!-- Contact -->
+                <div class="footer_col">
+                    <h4 class="footer_col_title">Contact Us</h4>
+                    <div class="footer_contact_info">
+                        <p>📍 123, Coaching Lane, Near City Park,<br>New Delhi – 110001</p>
+                        <p>📞 +91 98765 43210</p>
+                        <p>✉️ info@coaching.edu.in</p>
+                        <p>🕐 Mon – Sat: 7:00 AM – 8:00 PM</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer Bottom Bar -->
+            <div class="footer_bottom">
+                <p class="footer_copyright">© 2026 Coaching. All rights reserved. Made with ❤️ for students.</p>
+                <div class="footer_bottom_links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
 
 </body>
 <script src="./js/index.js"></script>

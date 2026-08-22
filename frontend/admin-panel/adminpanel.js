@@ -31,7 +31,7 @@ loginForm.addEventListener('submit', function(event) {
     // 6. Check the credentials
     if (usernameValue === 'admin' && passwordValue === '12345') {
         alert('Login Successful! Welcome, Admin.');
-        window.location.href = '../admindashboard/admindashboard.html';
+        window.location.replace('../admindashboard/admindashboard.html');
     } else {
         alert('Error: Incorrect username or password.');
     }

@@ -15,25 +15,32 @@
     <section class="dashboard">
         <section class="dashboard-left">
             <h1>Left Div</h1>
-            <button>
-                <i class="fa-solid fa-book"></i>
+            <button onclick="loadpage('Dashboard', this)">
+                <i class="fa-solid fa-house"></i>
                 Dashboard
                 <span style="margin-left: auto;"><i class="fa-solid fa-angle-right" ></i></span>
             </button>
-            <button>
+            <button onclick="loadpage('Toppersection', this)">
                 <i class="fa-solid fa-user-graduate"></i>
                 Topper Section
                 <span style="margin-left: auto;"><i class="fa-solid fa-angle-right" ></i></span>
             </button>
-            <button>
+            <button onclick="loadpage('Library', this)">
+                <i class="fa-solid fa-book-open"></i>
+                Library
+                <span style="margin-left: auto;"><i class="fa-solid fa-angle-right" ></i></span>
+            </button>
+            <button onclick="loadpage('CustomerSupport', this)">
                 <i class="fa-solid fa-headset"></i>
                 Customer & Support
                 <span style="margin-left: auto;"><i class="fa-solid fa-angle-right" ></i></span>
             </button>
         </section>
-        <section class="dashboard-right">
+        <section class="dashboard-right" id="main-content">
             <h1>Right Div</h1>
         </section>
     </section>
 </body>
+
+<script src="./admindashboard.js"></script>
 </html>
