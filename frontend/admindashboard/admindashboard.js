@@ -4,6 +4,7 @@ async function loadpage(page, clickedButton) {
   try {
     const response = await fetch(`pages/${page}.html`);
 
+
     if (!response.ok) {
       throw new Error("Page not found");
     }
@@ -11,6 +12,8 @@ async function loadpage(page, clickedButton) {
     const html = await response.text();
 
     app.innerHTML = html;
+
+    localStorage.setItem("currentPage", page);
 
     // Sabhi buttons se active remove karo
         document.querySelectorAll(".dashboard-left button").forEach(button => {
@@ -28,7 +31,21 @@ async function loadpage(page, clickedButton) {
       <p>Could not load the page.</p>
     `;
   }
+
+  
+
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+    const savedPage = localStorage.getItem("currentPage");
+
+    if (savedPage) {
+        loadpage(savedPage);
+    } else {
+        loadpage("dashboard");
+    }
+});
+
 
 // function router() {
 //   const page = location.hash.substring(1) || "Dashboard";

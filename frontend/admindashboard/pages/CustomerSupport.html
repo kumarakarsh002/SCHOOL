@@ -1,15 +1,340 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        
+        * {
+            box-sizing: border-box;
+        }
+
+        .content {
+            height: 100vh;
+            width: 100%;
+            /* border: 2px solid green; */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+        .content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.content::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.content::-webkit-scrollbar-thumb {
+    background: #c7c7c7;
+    border-radius: 10px;
+}
+
+.content::-webkit-scrollbar-thumb:hover {
+    background: #999;
+}
+
+        .customersupport-banner{
+            
+            flex-shrink: 0;
+            border: 2px solid green;
+            width: 95%;
+            height: 300px;
+            overflow: hidden;
+            img{
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+            }
+        }
+
+
+        .customersupport-searchdiv {
+            flex-shrink: 0;
+            margin-top: 2%;
+            border: 2px solid black;
+            width: 95%;
+            height: 185px;
+            /* padding: 15px; */
+            display: flex;
+            align-items: center;
+
+        }
+
+        .customersupport-searchdiv-search {
+            margin-left: 2%;
+            border: 1px solid #ddd;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            border-radius: 5px;
+            width: 30%;
+            height: 42%;
+            display: flex;
+            align-items: center;
+            padding: 0% 1% 0% 1%;
+            gap: 4px;
+
+            input {
+                height: 100%;
+                width: 95%;
+                font-size: 15px;
+                outline: none;
+                border: none;
+            }
+
+        }
+
+        .customersupport-searchdiv-search:focus-within {
+            border-color: #6366f1;
+            box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.15);
+        }
+
+        .customersupport-searchdiv-datetime {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            width: 15%;
+            height: 42%;
+            margin-left: auto;
+            margin-right: 3%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+
+            select {
+                border: none;
+                outline: none;
+                width: 95%;
+                font-size: 16px;
+            }
+        }
+
+        .customersupport-table {
+            flex-shrink: 0;
+            margin-top: 2%;
+            /* border: 1px solid black; */
+            width: 100%;
+        }
+
+        .table-box {
+    width: 100%;
+    background: #fff;
+    border: 1px solid #e2e2e2;
+    border-radius: 16px;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background: #fafafa;
+}
+
+th {
+    padding: 14px 18px;
+    text-align: left;
+    font-size: 11px;
+    font-weight: 600;
+    color: #777;
+    border-bottom: 1px solid #e5e5e5;
+    white-space: nowrap;
+}
+
+td {
+    padding: 16px 18px;
+    font-size: 13px;
+    color: #555;
+    border-bottom: 1px solid #eeeeee;
+    vertical-align: middle;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Name */
+td:nth-child(2) {
+    font-weight: 600;
+    color: #222;
+}
+
+/* Feedback */
+td:nth-child(5) {
+    max-width: 350px;
+    line-height: 19px;
+}
+
+/* Time */
+td:nth-child(6) {
+    white-space: nowrap;
+    color: #777;
+}
+
+
+/* Delete button */
+
+.delete-btn {
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    border-radius: 6px;
+
+    background: #fff0f0;
+    color: #dc2626;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+    transition: 0.2s;
+}
+
+.delete-btn:hover {
+    background: #dc2626;
+    color: white;
+}
+
+.delete-btn i {
+    pointer-events: none;
+}
+    </style>
+
 </head>
+
 <body>
-    <h1>Customer & Support</h1>
+    <section class="content">
+        <section class="customersupport-banner">
+            <img src="./admindashboardimages/customersupportbanner.jpg" alt="customersupport-banner" />
+        </section>
+
+
+        <section class="customersupport-searchdiv">
+            <div class="customersupport-searchdiv-search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="search" placeholder="Search the user..." />
+            </div>
+            <div class="customersupport-searchdiv-datetime">
+                <select>
+                    <option>All</option>
+                    <option>Today</option>
+                    <option>Tomorrow</option>
+                    <option>Last 7 days</option>
+                </select>
+            </div>
+        </section>
+
+
+        <section class="customersupport-table">
+            <div class="table-box">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>NAME</th>
+                            <th>EMAIL</th>
+                            <th>MOBILE</th>
+                            <th>FEEDBACK</th>
+                            <th>TIME</th>
+                            <th>ACTION</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="feedbackTable">
+                        <!-- Backend data will come here -->
+                          <tr>
+        <td>1</td>
+        <td>Rahul Kumar</td>
+        <td>rahul@gmail.com</td>
+        <td>9876543210</td>
+        <td>Website is very easy to use.</td>
+        <td>24 Aug 2026, 06:42 PM</td>
+        <td>
+            <button class="delete-btn" title="Delete">
+                <i class="fa-solid fa-trash"></i>
+            </button>
+        </td>
+    </tr>
+
+    <tr>
+        <td>2</td>
+        <td>Priya Sharma</td>
+        <td>priya@gmail.com</td>
+        <td>9123456780</td>
+        <td>Very useful platform. I really liked the interface.</td>
+        <td>24 Aug 2026, 06:51 PM</td>
+        <td>
+            <button class="delete-btn" title="Delete">
+                <i class="fa-solid fa-trash"></i>
+            </button>
+        </td>
+    </tr>
+
+    <tr>
+        <td>3</td>
+        <td>Amit Singh</td>
+        <td>amit@gmail.com</td>
+        <td>9988776655</td>
+        <td>Everything is working perfectly.</td>
+        <td>24 Aug 2026, 07:03 PM</td>
+        <td>
+            <button class="delete-btn" title="Delete">
+                <i class="fa-solid fa-trash"></i>
+            </button>
+        </td>
+    </tr>
+
+    <tr>
+        <td>4</td>
+        <td>Neha Verma</td>
+        <td>neha@gmail.com</td>
+        <td>9876123456</td>
+        <td>The website looks clean and professional.</td>
+        <td>24 Aug 2026, 07:15 PM</td>
+        <td>
+            <button class="delete-btn" title="Delete">
+                <i class="fa-solid fa-trash"></i>
+            </button>
+        </td>
+    </tr>
+
+    <tr>
+        <td>5</td>
+        <td>Vikash Kumar</td>
+        <td>vikash@gmail.com</td>
+        <td>9012345678</td>
+        <td>Good experience. Loading speed is also good.</td>
+        <td>24 Aug 2026, 07:28 PM</td>
+        <td>
+            <button class="delete-btn" title="Delete">
+                <i class="fa-solid fa-trash"></i>
+            </button>
+        </td>
+    </tr>
+                    </tbody>
+
+                </table>
+
+            </div>
+        </section>
+    </section>
 </body>
+
 </html>

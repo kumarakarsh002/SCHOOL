@@ -1,9 +1,12 @@
-
+html{
+    scroll-behavior: smooth;
+}
 body {
     display: flex;
     flex-direction: column;
     align-items: center;
     user-select: none;
+    
     font-family: 'Poppins', sans-serif;
 }
 
@@ -595,8 +598,16 @@ body {
     
     animation: scroll-left 10s linear infinite;
     overflow: hidden;
+    
 
 }
+#class{
+        display: inline-block;
+        margin: -15px;
+        font-size: 18px;
+        color: gray;
+        /* font-weight: 600; */
+    }
 
 
 /* @keyframes scroll-left {
