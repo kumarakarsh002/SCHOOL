@@ -26,7 +26,7 @@
             overflow-y: auto;
             overflow-x: hidden;
         }
-        .content::-webkit-scrollbar {
+.content::-webkit-scrollbar {
     width: 6px;
 }
 
@@ -43,27 +43,30 @@
     background: #999;
 }
 
-        .customersupport-banner{
+.customersupport-banner{
             
             flex-shrink: 0;
             border: 2px solid green;
+            border-radius: 6px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
             width: 95%;
-            height: 300px;
+            height: 250px;
             overflow: hidden;
-            img{
+            
+}   img{
                 width: 100%;
                 height: auto;
                 object-fit: cover;
-            }
-        }
+                
+            }     
 
 
-        .customersupport-searchdiv {
+.customersupport-searchdiv {
             flex-shrink: 0;
-            margin-top: 2%;
-            border: 2px solid black;
+            margin-top: 1%;
+            /* border: 2px solid black; */
             width: 95%;
-            height: 185px;
+            height: 70px;
             /* padding: 15px; */
             display: flex;
             align-items: center;
@@ -76,7 +79,7 @@
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
             border-radius: 5px;
             width: 30%;
-            height: 42%;
+            height: 60%;
             display: flex;
             align-items: center;
             padding: 0% 1% 0% 1%;
@@ -102,7 +105,7 @@
             border-radius: 5px;
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
             width: 15%;
-            height: 42%;
+            height: 60%;
             margin-left: auto;
             margin-right: 3%;
             cursor: pointer;
@@ -220,7 +223,7 @@ td:nth-child(6) {
 <body>
     <section class="content">
         <section class="customersupport-banner">
-            <img src="./admindashboardimages/customersupportbanner.jpg" alt="customersupport-banner" />
+            <img src="../admindashboardimages/customersupportbanner.jpg" alt="customersupport-banner" />
         </section>
 
 
