@@ -8,8 +8,76 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+    *{
+        box-sizing: border-box;
+    }
+    body{
+        font-family: 'Poppins', sans-serif;
+    }
+    .content{
+        height: 100vh;
+        overflow: scroll;
+        border: 2px solid pink;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .Toppersection-studentdetails{
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+        width: 95%;
+        height: 45%;
+        display: flex;
+    }
+    .Toppersection-studentdetails-image{
+        border: 2px dotted gold;
+        border-radius: 12px;
+        margin: 3% 2% 3% 2%;
+        flex: 1;
+        cursor: pointer;
+        transition: 0.3s;
+        p{
+            text-align: center;
+            color: #666;
+            margin-bottom: 8px;
+        }
+        span{
+            color: #4f46e5;
+        font-weight: bold;
+        }
+        
+
+    }
+    .Toppersection-studentdetails-image:hover{
+        border-color: #4f46e5;
+      background: #f5f3ff;
+    }
+    .Toppersection-studentdetails-imagedetails{
+        border: 2px solid seagreen;
+        flex: 2;
+    }
+</style>
+
+
 </head>
 <body>
+    <section class="content">
     <h1>Toppersection</h1>
+    <section class="Toppersection-studentdetails">
+        <div class="Toppersection-studentdetails-image">
+            <p>Drag & Drop your image here</p>
+            <p>or <span>Browse Files</span></p>
+
+         <input type="file" id="fileInput" accept="image/*" >
+        </div>
+        <div class="Toppersection-studentdetails-imagedetails">
+
+        </div>
+    </section>
+    </section>
+    
 </body>
 </html>

@@ -1,3 +1,3 @@
 function Student(){
-    window.location.href = "student-panel/studentpanel.html"
+    window.open("student-panel/studentpanel.html", "_blank");
 }

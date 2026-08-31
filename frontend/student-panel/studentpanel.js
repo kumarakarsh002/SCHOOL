@@ -15,5 +15,5 @@ function Login() {
 
 function StudentLog(){
     alert("Student Login")
-    window.location.href = "../studentdashboard/studentdashboard.html"
+    window.location.replace("../studentdashboard/studentdashboard.html");
 }
