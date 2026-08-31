@@ -17,20 +17,20 @@
         </div>
         <div id="studentlogin" class="student-loginsection-right">
             <h1>Student Login</h1>
-            <form class="student-loginsection-right-form">
+            <form class="student-loginsection-right-form" id="loginform">
                 <div class="student-loginsection-right-form-div">
                     <label>Name</label>
-                    <input type="text" placeholder="Enter Your Name" class="student-loginsection-right-form-div-input" />
+                    <input type="text" placeholder="Enter Your Name" class="student-loginsection-right-form-div-input" id="name"/>
                 </div>
                 <div class="student-loginsection-right-form-div">
                     <label>Username</label>
-                    <input type="text" placeholder="Enter Your Username" class="student-loginsection-right-form-div-input"/>
+                    <input type="text" placeholder="Enter Your Username" class="student-loginsection-right-form-div-input" id="username"/>
                 </div>
                 <div class="student-loginsection-right-form-div">
                     <label>Password</label>
-                    <input type="password" placeholder="Enter Your Password" class="student-loginsection-right-form-div-input" />
+                    <input type="password" placeholder="Enter Your Password" class="student-loginsection-right-form-div-input" id="password"/>
                 </div>
-                <input type="button" value="Login" class="student-loginsection-right-form-div-button" onclick="StudentLog()"/>
+                <input type="button" value="Login" class="student-loginsection-right-form-div-button" onclick="StudentLog()" id="loginbutton"/>
             </form>
             <p>Don't have an account? <a onclick="SignUp()">Sign Up</a></p>
         </div>

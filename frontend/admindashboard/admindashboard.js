@@ -12,7 +12,9 @@ async function loadpage(page, clickedButton) {
     const html = await response.text();
 
     app.innerHTML = html;
-
+    if (page === "Toppersection") {
+        inittoppersection();
+    }
     localStorage.setItem("currentPage", page);
 
     // Sabhi buttons se active remove karo
@@ -54,3 +56,56 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // window.addEventListener("hashchange", router);
 // window.addEventListener("load", router);
+
+
+
+
+
+// Toppersection
+function inittoppersection() {
+    const uploadImage = document.getElementById("ImageDiv");
+    const fileInput = document.getElementById("fileInput");
+    const previewDiv = document.getElementById("ImageDivPreview");
+    const previewImage = document.getElementById("imagePreview");
+    const button = document.getElementById("deletebutton");
+
+    // Click on upload area
+    uploadImage.addEventListener("click", () => {
+        fileInput.click();
+    });
+
+    // When image is selected
+    fileInput.addEventListener("change", () => {
+
+        const file = fileInput.files[0];
+
+        if (file) {
+
+            // Create image URL
+            const imageURL = URL.createObjectURL(file);
+
+            // Put URL into the actual img
+            previewImage.src = imageURL;
+
+            // Hide upload section
+            uploadImage.classList.add("hidden");
+
+            // Show preview section
+            previewDiv.classList.remove("hidden");
+        }
+    });
+    button.addEventListener("click", ()=>{
+      previewImage.src = "";
+      fileInput.value = "";
+      previewDiv.classList.add("hidden");
+      uploadImage.classList.remove("hidden");
+
+    })
+}
+
+// Initialize
+document.addEventListener("DOMContentLoaded", () => {
+    inittoppersection();
+});
+
+
