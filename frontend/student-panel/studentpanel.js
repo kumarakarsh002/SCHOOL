@@ -11,3 +11,9 @@ function Login() {
     loginsection.classList.remove("hidden");
     signUpsection.classList.add("hidden");
 }
+
+
+function StudentLog(){
+    alert("Student Login")
+    window.location.href = "studentdashboard/studentdashboard.html"
+}

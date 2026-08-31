@@ -1,5 +1,6 @@
 *{
     box-sizing: border-box;
+    user-select: none;
 }
 
 body{
@@ -92,6 +93,15 @@ body{
     
     /* Animation */
     transition: all 0.3s ease;
+}
+.student-loginsection-right-form-div-button:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(99, 102, 241, 0.45);
+    background: linear-gradient(135deg, #4f46e5, #7c3aed);
+}
+.student-loginsection-right-form-div-button:active{
+    transform: translateY(1px);
+    box-shadow: 0 12px 28px rgba(99, 102, 241, 0.03);
 }
 
 
