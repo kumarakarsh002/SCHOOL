@@ -13,20 +13,19 @@ function Login() {
 }
 
 
-function StudentLog(){
-    alert("Student Login")
-    window.location.replace("../studentdashboard/studentdashboard.html");
 
-    const name = document.getElementById("name").value;
-    const username = document.getElementById("username").value;
-    const password = document.getElementById("password").value;
+    
+    
     const loginform = document.getElementById("loginform");
     // const button = document.getElementById("loginbutton")
 
     loginform.addEventListener('submit', function(event){
+        const sname = document.getElementById("name").value;
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
         event.preventDefault();
 
-        if(name === ''){
+        if(sname === ''){
             alert("Please enter Your name");
             return;
         }
@@ -39,13 +38,15 @@ function StudentLog(){
             return;
         }
 
-        if(username === "student" && password === "12345"){
-            alert("Welcome Student" + name)
+        if(username === 'student' && password === '12345'){
+            alert(`Welcome Student ${sname}`);
             window.location.replace("../studentdashboard/studentdashboard.html")
+        }
+        else{
+            alert("Incorrect Details")
         }
 
     })
     
 
 
-}
