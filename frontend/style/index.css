@@ -478,6 +478,7 @@ body {
     box-sizing: border-box;
     transition: transform 0.3s ease;
     cursor: pointer;
+    overflow: hidden;
 }
 .main-ouracademy-rightdiv-quotes:hover{
     transform: translateX(10px);
@@ -797,6 +798,65 @@ body {
 
 
 
+
+/* Review Section */
+.main-review{
+    margin-top: 5%;
+    /* border: 1px solid #ddd; */
+    /* border-radius: 15px; */
+    /* box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08); */
+    width: 85%;
+    height: 65vh;
+}
+
+.main-review-heading{
+    border: 2px solid green;
+    width: 100%;
+    height: 15%;
+    text-align: center;
+    h1{
+        display: inline-block;
+    background: linear-gradient(135deg,
+            #38bdf8 0%,
+            #2563eb 30%,
+            #7c3aed 70%,
+            #a855f7 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+        font-size: 2.4em;
+        margin: 0px;
+    }
+}
+.main-review-div{
+    border: 2px solid red;
+    height: 80%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main-review-div-reviews{
+    border: 2px solid gold;
+    border-radius: 10px;
+    width: 20%;
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    p{
+        margin: 0px;
+    }
+}
+
+.main-review-div-reviews-image{
+    margin-top: 5%;
+    border: 2px solid green;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    overflow: hidden;
+}
 
 
 
