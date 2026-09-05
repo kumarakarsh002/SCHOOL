@@ -100,5 +100,5 @@ for (let i = 0; i < review.length; i++) {
     `;
 }
 
-content.innerHTML = reviewHTML;
+content.innerHTML = reviewhtml;
 
