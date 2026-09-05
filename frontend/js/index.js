@@ -20,55 +20,55 @@ const review = [
     {
         id: 1,
         image: "./image/home/review.png",
-        stars: 5,
+        stars: "⭐⭐⭐⭐",
         text: "There is nothing to do"
     },
     {
         id: 2,
         image: "./image/home/review.png",
-        stars: 5,
+        stars: "⭐⭐⭐⭐⭐",
         text: "There is nothing to do"
     },
     {
         id: 3,
         image: "./image/home/review.png",
-        stars: 5,
+        stars: "⭐⭐⭐⭐",
         text: "There is nothing to do"
     },
     {
         id: 4,
         image: "./image/home/review.png",
-        stars: 5,
+        stars: "⭐⭐⭐⭐⭐",
         text: "There is nothing to do"
     },
     {
         id: 5,
         image: "./image/home/review.png",
-        stars: 5,
+        stars: "⭐⭐⭐⭐⭐",
         text: "There is nothing to do"
     },
     {
         id: 6,
         image: "./image/home/review.png",
-        stars: 5,
+        stars: "⭐⭐⭐⭐",
         text: "There is nothing to do"
     },
     {
         id: 7,
         image: "./image/home/review.png",
-        stars: 5,
+        stars: "⭐⭐⭐",
         text: "There is nothing to do"
     },
     {
         id: 8,
         image: "./image/home/review.png",
-        stars: 5,
+        stars: "⭐⭐⭐⭐⭐",
         text: "There is nothing to do"
     },
     {
         id: 9,
         image: "./image/home/review.png",
-        stars: 5,
+        stars: "⭐⭐⭐⭐⭐",
         text: "There is nothing to do"
     },
 
