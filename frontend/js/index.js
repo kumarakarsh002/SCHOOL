@@ -87,7 +87,7 @@ let reviewhtml = "";
 
 for (let i = 0; i < review.length; i++) {
     
-    reviewhtml.innerHTML += `
+    reviewhtml += `
         <div class="main-review-div-reviews">
                 <div class="main-review-div-reviews-image">
                     <img src="${review[i].image}" alt="Review-Image" />
