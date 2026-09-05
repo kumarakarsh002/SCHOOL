@@ -109,3 +109,36 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+
+
+
+// Session Timming
+const inactiveTime = 10 * 60 * 1000;
+
+        let timer;
+
+        function resetTimer() {
+            // Purana timer remove karo
+            clearTimeout(timer);
+
+            // Naya timer start karo
+            timer = setTimeout(function () {
+
+                alert("Session expired due to inactivity!");
+
+                // Login page par bhejo
+                window.location.replace("../admin-panel/adminpanel.html");
+
+            }, inactiveTime);
+        }
+
+        // User ki activity detect karo
+        document.addEventListener("mousemove", resetTimer);
+        document.addEventListener("click", resetTimer);
+        document.addEventListener("keydown", resetTimer);
+        document.addEventListener("scroll", resetTimer);
+        document.addEventListener("touchstart", resetTimer);
+
+        // Page load hote hi timer start
+        resetTimer();
+

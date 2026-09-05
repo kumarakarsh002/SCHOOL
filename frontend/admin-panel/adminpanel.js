@@ -40,6 +40,6 @@ loginForm.addEventListener('submit', function(event) {
     } else {
         alert('Error: Incorrect username or password.');
     }    
-    }, 3000);
+    }, 2000);
     
 });
