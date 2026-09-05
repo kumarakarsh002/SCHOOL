@@ -83,10 +83,11 @@ const review = [
 ]
 
 const content = document.getElementById('review-content');
+let reviewhtml = "";
 
 for (let i = 0; i < review.length; i++) {
     
-    content.innerHTML += `
+    reviewhtml.innerHTML += `
         <div class="main-review-div-reviews">
                 <div class="main-review-div-reviews-image">
                     <img src="${review[i].image}" alt="Review-Image" />
@@ -99,4 +100,5 @@ for (let i = 0; i < review.length; i++) {
     `;
 }
 
+content.innerHTML = reviewHTML;
 
